@@ -1,14 +1,19 @@
 # Temperature Converter
-# A small program for practising Git and GitHub.
-# It converts a temperature from Celsius to Fahrenheit.
-#
-# How to run it:  python temperature_converter.py
 
-# Ask the user for a temperature in Celsius
-celsius = float(input("Temperature in Celsius: "))
+print("1. Celsius to Fahrenheit")
+print("2. Fahrenheit to Celsius")
 
-# Convert to Fahrenheit
-fahrenheit = celsius * 9 / 5 + 32
+choice = input("Choose conversion (1 or 2): ")
 
-# Show the result
-print(f"Fahrenheit: {fahrenheit:.2f}")
+if choice == "1":
+    celsius = float(input("Temperature in Celsius: "))
+    fahrenheit = celsius * 9 / 5 + 32
+    print(f"Fahrenheit: {fahrenheit:.2f}")
+
+elif choice == "2":
+    fahrenheit = float(input("Temperature in Fahrenheit: "))
+    celsius = (fahrenheit - 32) * 5 / 9
+    print(f"Celsius: {celsius:.2f}")
+
+else:
+    print("Invalid choice. Please enter 1 or 2.")
